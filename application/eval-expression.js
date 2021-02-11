@@ -136,89 +136,89 @@ function validateEqual(input) {
 	return false;
 }
 
-let input;
+// let input;
 
-input = processInput('', '*');
-console.log('should not permit operations when display is clear: ', input, input === '');
+// input = processInput('', '*');
+// console.log('should not permit operations when display is clear: ', input, input === '');
 
-input = processInput('', '/');
-console.log('should not permit operations when display is clear: ', input, input === '');
+// input = processInput('', '/');
+// console.log('should not permit operations when display is clear: ', input, input === '');
 
-input = processInput('', '+');
-console.log('should not permit operations when display is clear: ', input, input === '');
+// input = processInput('', '+');
+// console.log('should not permit operations when display is clear: ', input, input === '');
 
-input = processInput('', '-');
-console.log('should permit minus when display is clear: ', input, input === '-');
+// input = processInput('', '-');
+// console.log('should permit minus when display is clear: ', input, input === '-');
 
-input = validateEqual('1+3+');
-console.log('should not permit equal: ', input, input === false);
+// input = validateEqual('1+3+');
+// console.log('should not permit equal: ', input, input === false);
 
-input = validateEqual('1+3+5');
-console.log('should permit equal: ', input, input === true);
+// input = validateEqual('1+3+5');
+// console.log('should permit equal: ', input, input === true);
 
-input = processInput('1+', '+')
-console.log('should replace operand: ', input, input === '1+');
-input = processInput('1+', '*')
-console.log('should replace operand: ', input, input === '1*');
-input = processInput('1+', '/')
-console.log('should replace operand: ', input, input === '1/');
-input = processInput('1+', '-')
-console.log('should replace operand: ', input, input === '1-');
-input = processInput('1-', '+')
-console.log('should replace operand: ', input, input === '1+');
-input = processInput('1-', '/')
-console.log('should replace operand: ', input, input === '1/');
-input = processInput('1-', '-')
-console.log('should replace operand: ', input, input === '1-');
-input = processInput('6/', '-')
-console.log('should permit minus after operator: ', input, input === '6/-');
-input = processInput('6*', '-')
-console.log('should permit minus after operator: ', input, input === '6*-');
+// input = processInput('1+', '+')
+// console.log('should replace operand: ', input, input === '1+');
+// input = processInput('1+', '*')
+// console.log('should replace operand: ', input, input === '1*');
+// input = processInput('1+', '/')
+// console.log('should replace operand: ', input, input === '1/');
+// input = processInput('1+', '-')
+// console.log('should replace operand: ', input, input === '1-');
+// input = processInput('1-', '+')
+// console.log('should replace operand: ', input, input === '1+');
+// input = processInput('1-', '/')
+// console.log('should replace operand: ', input, input === '1/');
+// input = processInput('1-', '-')
+// console.log('should replace operand: ', input, input === '1-');
+// input = processInput('6/', '-')
+// console.log('should permit minus after operator: ', input, input === '6/-');
+// input = processInput('6*', '-')
+// console.log('should permit minus after operator: ', input, input === '6*-');
 
-input = processInput('6*-', '*')
-console.log('should not permit operator after minus: ', input, input === '6**');
+// input = processInput('6*-', '*')
+// console.log('should not permit operator after minus: ', input, input === '6**');
 
-input = processInput('6*-', '+')
-console.log('should not permit operator after minus: ', input, input === '6*+');
+// input = processInput('6*-', '+')
+// console.log('should not permit operator after minus: ', input, input === '6*+');
 
-input = processInput('', '0')
-console.log('no leading zeros ', input, input === '');
+// input = processInput('', '0')
+// console.log('no leading zeros ', input, input === '');
 
-input = processInput('6/', '0')
-console.log('no leading zeros ', input, input === '6/');
+// input = processInput('6/', '0')
+// console.log('no leading zeros ', input, input === '6/');
 
-input = processInput('2+3*', '0')
-console.log('no leading zeros ', input, input === '2+3*');
+// input = processInput('2+3*', '0')
+// console.log('no leading zeros ', input, input === '2+3*');
 
-input = processInput('2+3*1', '0')
-console.log('no leading zeros ', input, input === '2+3*10');
+// input = processInput('2+3*1', '0')
+// console.log('no leading zeros ', input, input === '2+3*10');
 
-input = processInput('-220', '6', true);
-console.log('after calculation ', input, input === '6');
+// input = processInput('-220', '6', true);
+// console.log('after calculation ', input, input === '6');
 
-input = processInput('6', '8', true);
-console.log('after calculation ', input, input === '8');
+// input = processInput('6', '8', true);
+// console.log('after calculation ', input, input === '8');
 
-input = processInput('6', '+', true);
-console.log('after calculation ', input, input === '6+');
+// input = processInput('6', '+', true);
+// console.log('after calculation ', input, input === '6+');
 
-input = processInput('6', '*', true);
-console.log('after calculation ', input, input === '6*');
+// input = processInput('6', '*', true);
+// console.log('after calculation ', input, input === '6*');
 
-input = processInput('6', '7', false);
-console.log('after calculation ', input, input === '67');
+// input = processInput('6', '7', false);
+// console.log('after calculation ', input, input === '67');
 
-input = processInput('6', '/', false);
-console.log('after calculation ', input, input === '6/');
+// input = processInput('6', '/', false);
+// console.log('after calculation ', input, input === '6/');
 
-input = processInput('6', '0', false);
-console.log('after calculation ', input, input === '60');
+// input = processInput('6', '0', false);
+// console.log('after calculation ', input, input === '60');
 
-input = evalExpression('-8-9*-6');
-console.log('should keep operations hierarquy', input, input === '46');
+// input = evalExpression('-8-9*-6');
+// console.log('should keep operations hierarquy', input, input === '46');
 
-input = getTokens('-8-9*-6');
-console.log('should tokenize correctly', input, input.toString() === '-8,-,9,*,-6');
+// input = getTokens('-8-9*-6');
+// console.log('should tokenize correctly', input, input.toString() === '-8,-,9,*,-6');
 
 // console.warn('========== getTokens ==========');
 // var tokens = getTokens('1+2-4');
