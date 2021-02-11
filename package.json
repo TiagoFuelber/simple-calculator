@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "mocha --reporter spec"
   },
   "dependencies": {
+    "chai": "^4.3.0",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
   }
 }
